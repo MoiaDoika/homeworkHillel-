@@ -1,28 +1,26 @@
-import java.sql.SQLOutput;
 import java.util.*;
-import java.lang.*;
 
 public class Homework3 {
     public void Cycle99(){
         for (int i = 0; i <= 99; i++) {
             if(i % 2 != 0) {
-                System.out.println("При помощи цикла for вывести на экран нечетные числа от 1 до 99.");
                 System.out.println("Решение "+i);
             }
         }
     }
-    static int Factor(int n){
+    public void Factor(){
+        int n = 1;
         int num = 1;
-        for (int i = 1; i <=n; i ++){
+        for (int i = 1; i <= n; i ++){
             num *=i;
+            System.out.println(num);
         }
-        return num;
+        System.out.println("Решение " + num);
     }
     public void WhileCycle99(){
         int i= 0;
         while (i <= 99) { i++;
             if(i % 2 != 0) {
-                System.out.println("Перепишите программы (1 и 2) с использованием цикла while.");
                 System.out.println("Решение "+i);
             }
         }
@@ -48,17 +46,13 @@ public class Homework3 {
     }
     public void NegativeConclusion(){
         for (int i = 0; i > -50; i-=5) {
-            System.out.println("Вывести 10 первых чисел последовательности 0, -5,-10,-15..");
             System.out.println("Решение "+i);
         }
     }
     public void MultiplicationTable(){
-        //int i = 8;
-        //int j = 7;
         //любое значение
         for (int i = 1; i <= 10; i++) {
             for (int j = 1; j <= 10; j++) {
-                System.out.println("Необходимо вывести на экран таблицу умножения на Х (х любое число в диапазоне 0 .. 10)");
                 System.out.println("Решение "+i + " x " + j + " = " + (i*j));
             }
         }
@@ -68,7 +62,6 @@ public class Homework3 {
         int[] arr = new int[10];
         for(int i = 0; i < 10; i++)
             arr[i] = 2*i+1;
-        System.out.println("Создайте массив, содержащий 10 первых нечетных чисел. Выведете элементы массива на консоль в одну строку, разделяя запятой.");
         System.out.print("Решение "+Arrays.toString(arr));
     }
     public void MinArray(){
@@ -84,7 +77,6 @@ public class Homework3 {
                 }
             }
         }
-        System.out.println("Дан массив размерности N, найти наименьший элемент массива и вывести на консоль (массив заполнить случайными числами из диапазона 0 .. 100)");
         System.out.println("Наменьший элемент это " + N[0]);
     }
     public void MaxArray(){
@@ -144,22 +136,28 @@ public class Homework3 {
         }
 
     public static void main(String[] args) {
-      Homework3 Joke = new Homework3();
-        Joke.Cycle99();
+      Homework3 objectJoke = new Homework3();
+        System.out.println("При помощи цикла for вывести на экран нечетные числа от 1 до 99.");
+        objectJoke.Cycle99();
         System.out.println("Дано число n при помощи цикла for посчитать факториал n!");
-        System.out.println("Решение "+Factor(4));
-        Joke.WhileCycle99();
+        objectJoke.Factor();
+        System.out.println("Перепишите программы (1 и 2) с использованием цикла while.");
+        objectJoke.WhileCycle99();
         System.out.println("Перепишите программы (1 и 2) с использованием цикла do - while.");
         System.out.println("Решение "+DoWhileFactor(4));
         System.out.println("Даны переменные x и n вычислить x^n.");
         System.out.println("Решение "+Calculation(3,5));
-        Joke.NegativeConclusion();
-        Joke.MultiplicationTable();
-        Joke.Arrays();
-        Joke.MinArray();
-        Joke.MaxArray();
-        Joke.Castling();
-        Joke.Chess();
+        System.out.println("Вывести 10 первых чисел последовательности 0, -5,-10,-15..");
+        objectJoke.NegativeConclusion();
+        System.out.println("Необходимо вывести на экран таблицу умножения на Х (х любое число в диапазоне 0 .. 10)");
+        objectJoke.MultiplicationTable();
+        System.out.println("Создайте массив, содержащий 10 первых нечетных чисел. Выведете элементы массива на консоль в одну строку, разделяя запятой.");
+        objectJoke.Arrays();
+        System.out.println("Дан массив размерности N, найти наименьший элемент массива и вывести на консоль (массив заполнить случайными числами из диапазона 0 .. 100)");
+        objectJoke.MinArray();
+        objectJoke.MaxArray();
+        objectJoke.Castling();
+        objectJoke.Chess();
 
     }
 }
