@@ -12,10 +12,6 @@ class Student{
     private int well;
     private String group;
 
-    public Student(){
-
-    }
-
     public Student(int id, String surname, String name, String patronymic, String dateOfBirth, String address, String phoneNumber,
                    String faculty, int well, String group){
         this.id = id;
@@ -114,7 +110,7 @@ class Student{
 
     public void Age(int years){
         String[] strBirthday = getDateOfBirth().split(",");
-        int year = (int)Integer.valueOf(strBirthday[2]);
+        int year = Integer.valueOf(strBirthday[2]);
         if(year >= years){
             System.out.println(" ID студента "+getId() + ". Фамилия студента " + getSurname() + ". Имя студента " + getName() + ". Отчество студента " + getPatronymic() + ". Дата рождения " + getDateOfBirth() + ". Адрес проживания " + getAddress() + ". Номер телефона " + getPhoneNumber() + ". Факультет " + getFaculty()
                     + ". Курс " + getWell() + ". Группа " + getGroup());
@@ -127,5 +123,4 @@ class Student{
                     + ". Курс " + getWell() + ". Группа " + getGroup());
         }
     }
-
 }
