@@ -5,7 +5,7 @@ class Student{
     private String surname;
     private String name;
     private String patronymic;
-    private String birthday;
+    private String dateOfBirth;
     private String address;
     private String phoneNumber;
     private String faculty;
@@ -16,13 +16,13 @@ class Student{
 
     }
 
-    public Student(int id, String surname, String name, String patronymic, String birthday, String address, String phoneNumber,
+    public Student(int id, String surname, String name, String patronymic, String dateOfBirth, String address, String phoneNumber,
                    String faculty, int well, String group){
         this.id = id;
         this.surname = surname;
         this.name = name;
         this.patronymic = patronymic;
-        this.birthday = birthday;
+        this.dateOfBirth = dateOfBirth;
         this.address = address;
         this.phoneNumber = phoneNumber;
         this.faculty = faculty;
@@ -43,8 +43,8 @@ class Student{
     public String getPatronymic(){
         return patronymic;
     }
-    public String getBirthday(){
-        return birthday;
+    public String getDateOfBirth(){
+        return dateOfBirth;
     }
     public String getAddress(){
         return address;
@@ -75,8 +75,8 @@ class Student{
     public void setPatronymic(String patronymic){
         this.patronymic = patronymic;
     }
-    public void setBirthday(String birthday){
-        this.birthday = birthday;
+    public void setBirthday(String dateOfBirth){
+        this.dateOfBirth = dateOfBirth;
     }
     public void setAddress(String address){
         this.address = address;
@@ -95,38 +95,36 @@ class Student{
     }
 
     public void show(){
-        System.out.println(getId() + " " + getSurname() + " " + getName() + " " + getPatronymic() + " " + getBirthday() + " " + getAddress() + " " + getPhoneNumber() + " " + getFaculty()
-                + " " + getWell() + " " + getGroup());
     }
 
     public void Faculty(){
-        if(this.getFaculty().equals("Экономика")){
-            System.out.println(getId() + " " + getSurname() + " " + getName() + " " + getPatronymic() + " " + getBirthday() + " " + getAddress() + " " + getPhoneNumber() + " " + getFaculty()
-                    + " " + getWell() + " " + getGroup());
+        if(this.getFaculty().equals("Международная Экономика")){
+            System.out.println(" ID студента "+getId() + ". Фамилия студента " + getSurname() + ". Имя студента " + getName() + ". Отчество студента " + getPatronymic() + ". Дата рождения " + getDateOfBirth() + ". Адрес проживания " + getAddress() + ". Номер телефона " + getPhoneNumber() + ". Факультет " + getFaculty()
+                    + ". Курс " + getWell() + ". Группа " + getGroup());
         }
     }
     public void listFaculty(String Faculty, int well){
 
         if(getFaculty().equals(faculty) && getWell() == well){
 
-            System.out.println(getId() + " " + getSurname() + " " + getName() + " " + getPatronymic() + " " + getBirthday() + " " + getAddress() + " " + getPhoneNumber() + " " + getFaculty()
-                    + " " + getWell() + " " + getGroup());
+            System.out.println(" ID студента "+getId() + ". Фамилия студента " + getSurname() + ". Имя студента " + getName() + ". Отчество студента " + getPatronymic() + ". Дата рождения " + getDateOfBirth() + ". Адрес проживания " + getAddress() + ". Номер телефона " + getPhoneNumber() + ". Факультет " + getFaculty()
+                    + ". Курс " + getWell() + ". Группа " + getGroup());
         }
     }
 
-    public void age(int years){
-        String[] strBirthday = getBirthday().split(",");
-        System.out.print(strBirthday[0] + " " + strBirthday[1] + " " + strBirthday[2]);
+    public void Age(int years){
+        String[] strBirthday = getDateOfBirth().split(",");
         int year = (int)Integer.valueOf(strBirthday[2]);
         if(year >= years){
-            System.out.println(getId() + " " + getSurname() + " " + getName() + " " + getPatronymic() + " " + getBirthday() + " " + getAddress() + " " + getPhoneNumber() + " " + getFaculty()
-                    + " " + getWell() + " " + getGroup());
+            System.out.println(" ID студента "+getId() + ". Фамилия студента " + getSurname() + ". Имя студента " + getName() + ". Отчество студента " + getPatronymic() + ". Дата рождения " + getDateOfBirth() + ". Адрес проживания " + getAddress() + ". Номер телефона " + getPhoneNumber() + ". Факультет " + getFaculty()
+                    + ". Курс " + getWell() + ". Группа " + getGroup());
         }
     }
-    public void Group(){
+    public void Group(String group){
         if(this.getGroup().equals("18")){
-            System.out.println(getId() + " " + getSurname() + " " + getName() + " " + getPatronymic() + " " + getBirthday() + " " + getAddress() + " " + getPhoneNumber() + " " + getFaculty()
-                    + " " + getWell() + " " + getGroup());
+
+            System.out.println(" ID студента "+getId() + ". Фамилия студента " + getSurname() + ". Имя студента " + getName() + ". Отчество студента " + getPatronymic() + ". Дата рождения " + getDateOfBirth() + ". Адрес проживания " + getAddress() + ". Номер телефона " + getPhoneNumber() + ". Факультет " + getFaculty()
+                    + ". Курс " + getWell() + ". Группа " + getGroup());
         }
     }
 
