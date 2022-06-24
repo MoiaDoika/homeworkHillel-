@@ -1,6 +1,6 @@
 package student;
 
-class Student{
+ class Student{
     private int id;
     private String surname;
     private String name;

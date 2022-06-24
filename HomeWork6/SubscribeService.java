@@ -1,29 +1,20 @@
 package HomeWork6;
 
-import org.jetbrains.annotations.NotNull;
+public abstract class SubscribeService implements SubscriberServiceImpl {
 
-public class SubscribeService {
-    public void print(Subscriber @NotNull [] subs) {
-
-        for (Subscriber s : subs) {
-            s.show();
-        }
-        System.out.println("Сведения об абонентах, у которых время внутригородских разговоров превышает 500мин.:");
-        for (Subscriber s : subs) {
-            s.TimeCityMin();
-        }
-        System.out.println("Сведения об абонентах, которые пользовались междугородней связью: ");
-        for (Subscriber s : subs) {
-            s.TimeInterCityMin();
-        }
-
-        System.out.println("Студенты с 2000г рождения:");
-        for (Subscriber s : subs) {
-            s.SurnameM();
-        }
-        System.out.println("Студенты c 18 группы:");
-        for (Student s : stud) {
-            s.Group("18");
+    @Override
+    public void print(Subscriber[] subs) {
+        Subscriber[] subscribers = SubscriberGenerator.getSubArrayArray();
+        System.out.println("все абоненты");
+        for (Subscriber u : subscribers)
+            System.out.println(u);
+        System.out.println("____");
+        System.out.println("студенты факультета право");
+        for (Subscriber u : subscribers) {
+            u.getTimeCityMin();
         }
     }
-}
+    }
+
+
+

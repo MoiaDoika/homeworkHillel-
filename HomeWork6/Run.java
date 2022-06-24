@@ -1,8 +1,17 @@
 package HomeWork6;
 public class Run {
     public static void main(String[] args) {
-        SubscribeService subs = new SubscribeService();
-        subs.print(SubscriberGenerator.getSubArrayArray());
+        Subscriber[] subs = SubscriberGenerator.getSubArrayArray(); // get users from method
+
+        // todo: add functionality get user from console
+
+        new SubscriberServiceImpl() {
+            @Override
+            public void print(Subscriber[] subscribers) {
+
+
+            }
+        }.print(subs);
     }
 }
 

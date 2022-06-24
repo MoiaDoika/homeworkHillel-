@@ -1,6 +1,6 @@
 package HomeWork6;
 
-public class SubscriberGenerator implements SubscribeService {
+public class SubscriberGenerator{
     public static Subscriber[] getSubArrayArray(){
 
         Subscriber[] subs = new Subscriber[10];
