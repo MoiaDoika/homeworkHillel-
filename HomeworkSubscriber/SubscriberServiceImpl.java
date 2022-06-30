@@ -1,5 +1,4 @@
-package HomeWork6;
-
+package HomeworkSubscriber;
 import java.util.ArrayList;
 
 public interface SubscriberServiceImpl {

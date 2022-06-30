@@ -1,4 +1,5 @@
-package HomeWork6;
+package HomeworkSubscriber;
+
 
 public class Run {
     public static void main(String[] args) {

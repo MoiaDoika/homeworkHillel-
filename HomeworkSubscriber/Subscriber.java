@@ -1,4 +1,4 @@
-package HomeWork6;
+package HomeworkSubscriber;
 
 class Subscriber {
     private int id;
@@ -30,7 +30,7 @@ class Subscriber {
 
     }
 
-    // get
+
     public int getId() {
         return id;
     }
@@ -75,7 +75,6 @@ class Subscriber {
         return traffic;
     }
 
-    //set
     public void setId(int id) {
         this.id = id;
     }
@@ -125,7 +124,7 @@ class Subscriber {
     }
     @Override
     public String toString() {
-        return " ID абонента " + getId() + ". Фамилия абонента " + getSurname() + ". Имя абонента " + getName() + ". Отчество абонента " + getPatronymic() + ". Город абонета " + getCity() + ". Номер телефона " + getNumberPhone() + ". Договор " + getNumberContract() + ". Баланс " + getBalance()
+        return  "ID абонента " + getId() + ". Фамилия абонента " + getSurname() + ". Имя абонента " + getName() + ". Отчество абонента " + getPatronymic() + ". Город абонета " + getCity() + ". Номер телефона " + getNumberPhone() + ". Договор " + getNumberContract() + ". Баланс " + getBalance()
                 + ". Количество городских минут " + getTimeCityMin() + ". Количество межгородских минут " + getTimeInterCityMin() + ". Количество интернет трафика " + getTraffic();
     }
 }
