@@ -1,17 +1,12 @@
 package HomeWork6;
+
 public class Run {
     public static void main(String[] args) {
-        Subscriber[] subs = SubscriberGenerator.getSubArrayArray(); // get users from method
-
-        // todo: add functionality get user from console
-
-        new SubscriberServiceImpl() {
-            @Override
-            public void print(Subscriber[] subscribers) {
-
-
-            }
-        }.print(subs);
+        SubscribeService sub = new SubscribeService();
+        sub.TimeCityMin(SubscriberGenerator.getSubscriber());
+        sub.UserUseInterCityMin(SubscriberGenerator.getSubscriber());
+        sub.FirstLetterParameter(SubscriberGenerator.getSubscriber());
+        sub.SumTraffic(SubscriberGenerator.getSubscriber());
+        sub.NumbNegativeBalance(SubscriberGenerator.getSubscriber());
     }
 }
-

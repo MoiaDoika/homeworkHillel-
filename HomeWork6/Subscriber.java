@@ -11,10 +11,10 @@ class Subscriber {
     private int balance;
     private int timeCityMin;
     private int timeInterCityMin;
-    private String traffic;
+    private int traffic;
 
     public Subscriber(int id, String surname, String name, String patronymic, String city, String numberPhone, String numberContract,
-                      int balance, int timeCityMin, int timeInterCityMin, String traffic) {
+                      int balance, int timeCityMin, int timeInterCityMin, int traffic) {
 
         this.id = id;
         this.surname = surname;
@@ -71,7 +71,7 @@ class Subscriber {
         return timeInterCityMin;
     }
 
-    public String getTraffic() {
+    public int getTraffic() {
         return traffic;
     }
 
@@ -116,66 +116,16 @@ class Subscriber {
         this.timeInterCityMin = timeInterCityMin;
     }
 
-    public void setTraffic(String traffic) {
+    public void setTraffic(int traffic) {
         this.traffic = traffic;
     }
 
     public void show() {
 
     }
-
-    public void TimeCityMin(int timeCityMin){
-
-        if (this.getTimeCityMin() > timeCityMin){
-            System.out.println(this);}
-    }
-
-    public void TimeInterCityMin(int timeInterCityMin){
-
-        if (this.getTimeInterCityMin() == timeInterCityMin){
-            System.out.println(this);}
-    }
-
-    public void SurnameL(String surname){
-
-        if (this.getSurname().equals(surname)){
-            System.out.println(this);}
-    }
-
-    public void AccessCityTraffic(String traffic, String city){
-
-        if (this.getTraffic().equals(traffic) && getCity().equals(city)){
-            System.out.println(this);}
-    }
-    public void MinBalance(int balance){
-
-        if (this.getBalance() == balance){
-            System.out.println(this);}
-    }
-
     @Override
     public String toString() {
         return " ID абонента " + getId() + ". Фамилия абонента " + getSurname() + ". Имя абонента " + getName() + ". Отчество абонента " + getPatronymic() + ". Город абонета " + getCity() + ". Номер телефона " + getNumberPhone() + ". Договор " + getNumberContract() + ". Баланс " + getBalance()
                 + ". Количество городских минут " + getTimeCityMin() + ". Количество межгородских минут " + getTimeInterCityMin() + ". Количество интернет трафика " + getTraffic();
     }
 }
-       /* public void TimeCityMin() {
-            if (this.getTimeCityMin() == 500) {
-                System.out.println(" ID абонента " + getId() + ". Фамилия абонента " + getSurname() + ". Имя абонента " + getName() + ". Отчество абонента " + getPatronymic() + ". Город абонета " + getCity() + ". Номер телефона " + getNumberPhone() + ". Договор " + getNumberContract() + ". Баланс " + getBalance()
-                        + ". Количество городских минут " + getTimeCityMin() + ". Количество межгородских минут " + getTimeInterCityMin() + ". Количество интернет трафика " + getTraffic());
-            }
-        }
-        public void TimeInterCityMin() {
-            if (this.getTimeInterCityMin() > 0) {
-                System.out.println(" ID абонента " + getId() + ". Фамилия абонента " + getSurname() + ". Имя абонента " + getName() + ". Отчество абонента " + getPatronymic() + ". Город абонета " + getCity() + ". Номер телефона " + getNumberPhone() + ". Договор " + getNumberContract() + ". Баланс " + getBalance()
-                        + ". Количество городских минут " + getTimeCityMin() + ". Количество межгородских минут " + getTimeInterCityMin() + ". Количество интернет трафика " + getTraffic());
-            }
-        }
-        public void SurnameM() {
-            if (this.getSurname().startsWith("M")) {
-                System.out.println(" ID абонента " + getId() + ". Фамилия абонента " + getSurname() + ". Имя абонента " + getName() + ". Отчество абонента " + getPatronymic() + ". Город абонета " + getCity() + ". Номер телефона " + getNumberPhone() + ". Договор " + getNumberContract() + ". Баланс " + getBalance()
-                        + ". Количество городских минут " + getTimeCityMin() + ". Количество межгородских минут " + getTimeInterCityMin() + ". Количество интернет трафика " + getTraffic());
-            }
-        }
-    }
-}*/
