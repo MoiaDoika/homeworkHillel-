@@ -1,0 +1,21 @@
+[33m7fd4c7d[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m HEAD@{0}: commit: work on mistakes
+[33mfe01b85[m HEAD@{1}: commit: subscriber
+[33m279423d[m HEAD@{2}: commit: subscriber
+[33m5b7a9d0[m HEAD@{3}: commit: subscriber
+[33m2941dd7[m HEAD@{4}: commit (amend): newsubscriber
+[33m97ef247[m HEAD@{5}: commit: newsubscriber
+[33m5cafea3[m HEAD@{6}: commit: subscriber3
+[33m621a832[m HEAD@{7}: commit: subscriber2
+[33m4f8ed3a[m HEAD@{8}: commit: subscriber1
+[33mfb1e503[m HEAD@{9}: commit: finalStudent
+[33m9664360[m HEAD@{10}: merge origin/main: Fast-forward
+[33m987720f[m HEAD@{11}: commit: student2
+[33m3e0804a[m HEAD@{12}: commit: student
+[33m1c26bc0[m HEAD@{13}: commit: student
+[33mf2c43bc[m HEAD@{14}: commit: homework3
+[33m0c79f1f[m HEAD@{15}: commit: homework3
+[33m9380bf7[m HEAD@{16}: commit: homework3
+[33mb8479a7[m HEAD@{17}: commit: add targer to gitignore
+[33m938aeae[m HEAD@{18}: commit: two commit
+[33m20f7080[m HEAD@{19}: commit: my first commit
+[33m254e2a7[m HEAD@{20}: clone: from https://github.com/MoiaDoika/homeworkHillel-.git
