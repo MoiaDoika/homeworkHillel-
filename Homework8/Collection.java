@@ -5,7 +5,7 @@ public class Collection implements InterFace {
     private int size = 0;
     private int currentIndex = 0;
 
-    public boolean add(String value) {
+    public boolean firstAdd(String value) {
         if (size == array.length) {
             grow();
         }

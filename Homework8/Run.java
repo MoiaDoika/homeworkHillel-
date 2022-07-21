@@ -11,14 +11,14 @@ public class Run {
         stringCollection.add(3, "5");
         stringCollection.add(4, "106");
         stringCollection.delete("23");
-        stringCollection.add("186");
+        stringCollection.firstAdd("186");
         System.out.println(stringCollection.size());
         System.out.println(stringCollection.get(2));
         stringCollection2.add(0, "3");
         stringCollection2.add(1, "15");
-        stringCollection2.add("186");
-        stringCollection2.add(null);
-        stringCollection.add(null);
+        stringCollection2.firstAdd("186");
+        stringCollection2.firstAdd(null);
+        stringCollection.firstAdd(null);
         System.out.println(stringCollection.contain("23"));
         System.out.println(stringCollection.equals(stringCollection2));
         stringCollection.add(2, "45");
