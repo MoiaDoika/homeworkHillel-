@@ -3,7 +3,7 @@ package PaperJet;
 import java.util.Scanner;
 
 public class User {
-    private Scanner inputScanner;
+    private static Scanner inputScanner;
 
     public User() {
         inputScanner = new Scanner(System.in);
@@ -32,7 +32,8 @@ public class User {
         // Ввод некорректный. Выведем запрос на ввод снова.
         return getMove();
     }
-    public boolean playAgain() {
+    public static boolean playAgain() {
+        TheFoundation game = new TheFoundation();
         System.out.print("Do you want to play more? ");
         String userInput = inputScanner.nextLine();
         userInput = userInput.toUpperCase();

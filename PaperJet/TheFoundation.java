@@ -1,5 +1,7 @@
 package PaperJet;
 
+import java.util.Scanner;
+
 public class TheFoundation {
 
     private User user;
@@ -14,6 +16,13 @@ public class TheFoundation {
         userScore = 0;
         computerScore = 0;
         numberOfGames = 0;
+    }
+
+    public void setName(){
+        System.out.println("Player, please,input your name");
+        Scanner scanner = new Scanner(System.in);
+        String playerName = scanner.nextLine();
+        System.out.println("Hello,"+ playerName+"!");
     }
 
     public void startGame() {
@@ -42,6 +51,7 @@ public class TheFoundation {
         }
         numberOfGames++;
 
+
         // Предложим пользователю сыграть еще раз
         if (user.playAgain()) {
             System.out.println();
@@ -51,7 +61,7 @@ public class TheFoundation {
         }
     }
 
-    private void printGameStats() {
+    public void printGameStats() {
         int wins = userScore;
         int losses = computerScore;
         int ties = numberOfGames - userScore - computerScore;
@@ -93,10 +103,5 @@ public class TheFoundation {
         for (int i = 0; i < numberOfDashes; i++) {
             System.out.print("-");
         }
-    }
-
-    public static void main(String[] args) {
-        TheFoundation game = new TheFoundation();
-        game.startGame();
     }
 }
