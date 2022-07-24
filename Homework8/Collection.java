@@ -13,6 +13,11 @@ public class Collection implements InterFace {
         return true;
     }
 
+    @Override
+    public boolean add(String value) {
+        return false;
+    }
+
 
     public boolean add(int index, String value) {
         if (size == array.length) {
@@ -107,4 +112,4 @@ public class Collection implements InterFace {
         this.array = array;
         return true;
     }
-    }
+}
