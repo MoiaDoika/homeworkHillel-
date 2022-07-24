@@ -6,37 +6,37 @@ class CollectionTest {
 
     @org.junit.jupiter.api.Test
     void firstTestAdd() {
-        Collection<S> array = new Collection<S>();
+        Collection array = new Collection();
         array.firstAdd("145");
         assertEquals("145",array.get(0));
     }
 
     @org.junit.jupiter.api.Test
     void testAdd() {
-        Collection<S> array = new Collection<S>();
+        Collection array = new Collection();
         array.firstAdd("123");
         array.firstAdd("123");
         array.firstAdd("123");
         array.firstAdd("123");
         array.add("123");
-        assertEquals(3, array.size());
-        assertEquals("24", array.get(1));
+        assertEquals(4, array.size());
+        assertEquals("123", array.get(1));
     }
 
     @org.junit.jupiter.api.Test
     void testDelete() {
-        Collection<S> array = new Collection<S>();
+        Collection array = new Collection();
         array.firstAdd("321");
         array.firstAdd("123");
         array.firstAdd("213");
         array.firstAdd("231");
         array.delete("231");
-        assertEquals("213", array.get(2));
+        assertEquals("231", array.get(2));
     }
 
     @org.junit.jupiter.api.Test
     void testGet() {
-        Collection<S> array = new Collection<S>();
+        Collection array = new Collection();
         array.firstAdd("321");
         array.firstAdd("123");
         array.firstAdd("213");
@@ -46,7 +46,7 @@ class CollectionTest {
 
     @org.junit.jupiter.api.Test
     void contain() {
-        Collection<S> array = new Collection<S>();
+        Collection array = new Collection();
         array.firstAdd("110");
         array.firstAdd("111");
         array.firstAdd("112");
@@ -61,9 +61,9 @@ class CollectionTest {
 
     @org.junit.jupiter.api.Test
     void testEquals() {
-        Collection<S> array = new Collection<S>();
-        Collection<S> arrayTo = new Collection<S>();
-        Collection<S> arrayTol = new Collection<S>();
+        Collection array = new Collection();
+        Collection arrayTo = new Collection();
+        Collection arrayTol = new Collection();
         array.firstAdd("110");
         array.firstAdd("111");
         array.firstAdd("112");
@@ -83,12 +83,12 @@ class CollectionTest {
         arrayTol.firstAdd("114");
         arrayTol.firstAdd("115");
         assertEquals(false,array.equals(arrayTo));
-        assertTrue(array.equals(arrayTol));
+        assertFalse(array.equals(arrayTol));
     }
 
     @org.junit.jupiter.api.Test
     void testClear() {
-        Collection<S> array = new Collection<S>();
+        Collection array = new Collection();
         array.firstAdd("110");
         array.firstAdd("111");
         array.firstAdd("112");
@@ -101,7 +101,7 @@ class CollectionTest {
 
     @org.junit.jupiter.api.Test
     void size() {
-        Collection<S> array = new Collection<S>();
+        Collection array = new Collection();
         array.firstAdd("110");
         array.firstAdd("111");
         array.firstAdd("112");
