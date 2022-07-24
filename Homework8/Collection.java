@@ -112,4 +112,41 @@ public class Collection implements InterFace {
         this.array = array;
         return true;
     }
+
+    public Iterator<String> iterator() {
+        Iterator<String> it = new Iterator<String>() {
+
+
+            @Override
+            public boolean hasNext() {
+                return currentIndex < size;
+            }
+
+            @Override
+            public String next() {
+                return array[currentIndex++];
+            }
+
+            @Override
+            public void remove() {
+                final String[] newArray = new String[array.length - 1];
+                int indexToRemove = currentIndex + 1;
+
+                System.arraycopy(array, 0, newArray, 0, indexToRemove);
+                System.arraycopy(array, indexToRemove + 1, newArray, indexToRemove, newArray.length - indexToRemove);
+
+                array = newArray;
+            }
+
+            @Override
+            public void forEach(Collection collection) {
+                while (collection.iterator().hasNext()) {
+                    System.out.println(iterator().next());
+                }
+            }
+
+
+        };
+        return it;
+    }
 }
