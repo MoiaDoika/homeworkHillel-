@@ -28,15 +28,17 @@ public class Run {
         stringCollection.delete(null);
 
 
-        stringCollection2.add(0, "0");
-        stringCollection2.add(1, "1");
-        stringCollection2.add(2, "2");
-        stringCollection2.add(3, "3");
-        stringCollection2.add(4, "4");
+        //Реализация Итератора
+
+        stringCollection2.add(0, "48");
+        stringCollection2.add(1, "24");
+        stringCollection2.add(2, "33");
+        stringCollection2.add(3, "158");
+        stringCollection2.add(4, "11");
         stringCollection2.iterator().remove();
         System.out.println(stringCollection2.iterator().next());
         stringCollection2.iterator().remove();
-        System.out.println(stringCollection2.contain("1"));
+        System.out.println(stringCollection2.contain("33"));
         System.out.println(stringCollection2.iterator().hasNext());
         stringCollection2.iterator().forEach(stringCollection2);
 
