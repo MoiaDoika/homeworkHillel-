@@ -1,6 +1,6 @@
 package Homework10;
 
-public class SquareRoot {
+public class QuadraticEquation {
     public static boolean root(double a, double b, double c){
         double D = b * b - 4 * a * c;
         if (D > 0) {

@@ -23,6 +23,6 @@ public class Main {
         System.out.println(NoDuplicate.removeDuplicates(stringCollection));
 
         //Реализация программы для вычисления корней квадратного уравнения
-        System.out.println(SquareRoot.root(1.0, 12.0, 36.0));
+        System.out.println(QuadraticEquation.root(1.0, 12.0, 36.0));
     }
 }
