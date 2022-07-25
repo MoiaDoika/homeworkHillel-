@@ -20,7 +20,7 @@ public class Main {
         stringCollection.add("glass");
         stringCollection.add("grass");
 
-        System.out.println(NoDuplicate.removeDuplicates(stringCollection));
+        System.out.println(Duplicate.deleteDup(stringCollection));
 
         //Реализация программы для вычисления корней квадратного уравнения
         System.out.println(QuadraticEquation.root(1.0, 12.0, 36.0));
