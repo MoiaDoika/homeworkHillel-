@@ -2,13 +2,13 @@ package Homework14;
 
 import java.io.IOException;
 
-public class RunCaptcha {
+public class Main {
     public static void main(String[] args) throws IOException {
-        int [] array = NumberActivity.intArray();
-        String[][] captcha = makeMatrix(array.length);
+        int [] array = NumberOutput.intArray();
+        String[][] captcha = crSystem(array.length);
 
         for (int i = 0; i < array.length; i++) {
-            String[][] bufferMatrix = PseudoDigits.givePseudoDigits(array[i]);
+            String[][] bufferMatrix = Numbers.inputFigure(array[i]);
 
             for (int j = 0; j < bufferMatrix.length; j++) {
                 for (int k =0  ; k < bufferMatrix[j].length; k++) {
@@ -29,7 +29,7 @@ public class RunCaptcha {
 
 
 
-    public static String[][] makeMatrix(int index){
+    public static String[][] crSystem(int index){
         return new String[6][index];
     }
 }

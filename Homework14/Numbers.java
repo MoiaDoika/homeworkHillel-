@@ -1,8 +1,8 @@
 package Homework14;
 
 
-public class PseudoDigits {
-public static String[][] givePseudoDigits(int index) {
+public class Numbers {
+public static String[][] inputFigure(int index) {
         switch (index){
         case   0:
         return  new  String[][]{
