@@ -1,5 +1,6 @@
 package PaperJet;
 
+import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -7,12 +8,9 @@ public class Run {
     private static Scanner in = new Scanner(System.in);
     protected static int number = 0;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         TheFoundation game = new TheFoundation();
-        System.out.println("Player, please,input your name");
-        Scanner scanner = new Scanner(System.in);
-        String playerName = scanner.nextLine();
-        System.out.println("Hello,"+ playerName+"!");
+        game.getName();
         try {
             System.out.println("How many rounds do you want to play?");
             number = in.nextInt();
@@ -28,5 +26,6 @@ public class Run {
             number--;
         } while (number > 0 && User.playAgain());
         game.printGameStats();
+        game.resFile();
     }
 }
