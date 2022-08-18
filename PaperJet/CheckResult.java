@@ -1,6 +1,5 @@
 package PaperJet;
 
-
 import java.io.IOException;
 
 public class CheckResult {

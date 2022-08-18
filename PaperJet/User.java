@@ -9,27 +9,23 @@ public class User {
         inputScanner = new Scanner(System.in);
     }
 
-    public Bot getMove() {
-        // Выведем запрос на ввод
+    public RockPaperScissors getMove() {
         System.out.print("Rock, paper or scissors? ");
 
-        // Прочитаем ввод пользователя
         String userInput = inputScanner.nextLine();
         userInput = userInput.toUpperCase();
         char firstLetter = userInput.charAt(0);
         if (firstLetter == 'R' || firstLetter == 'P' || firstLetter == 'S') {
-            // Ввод корректный
             switch (firstLetter) {
                 case 'R':
-                    return Bot.ROCK;
+                    return RockPaperScissors.ROCK;
                 case 'P':
-                    return Bot.PAPER;
+                    return RockPaperScissors.PAPER;
                 case 'S':
-                    return Bot.SCISSORS;
+                    return RockPaperScissors.SCISSORS;
             }
         }
 
-        // Ввод некорректный. Выведем запрос на ввод снова.
         return getMove();
     }
     public static boolean playAgain() {

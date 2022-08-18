@@ -77,23 +77,22 @@ public class TheFoundation {
     public void startGame() {
         System.out.println("ROCK, PAPER, SCISSORS!");
 
-        // Получение ходов
-        Bot userMove = user.getMove();
-        Bot computerMove = computer.getMove();
+        RockPaperScissors userMove = user.getMove();
+        RockPaperScissors computerMove = computer.getMove();
         System.out.println("\nVASH HODE " + userMove + ".");
         System.out.println("Hod computer " + computerMove + ".\n");
 
-        // Сравнение ходов и определение победителя
+
         int compareMoves = userMove.compareMoves(computerMove);
         switch (compareMoves) {
-            case 0: // Ничья
+            case 0:
                 System.out.println("Tie!");
                 break;
-            case 1: // Победил игрок
+            case 1:
                 System.out.println(userMove + " beats " + computerMove + ". You win!");
                 userScore++;
                 break;
-            case -1: // Победил компьютер
+            case -1:
                 System.out.println(computerMove + " beats " + userMove + ". Wasted.");
                 computerScore++;
                 break;
@@ -101,7 +100,6 @@ public class TheFoundation {
         numberOfGames++;
 
 
-        // Предложим пользователю сыграть еще раз
         if (user.playAgain()) {
             System.out.println();
             startGame();
@@ -116,12 +114,12 @@ public class TheFoundation {
         int ties = numberOfGames - userScore - computerScore;
         double percentageWon = (wins + ((double) ties) / 2) / numberOfGames;
 
-        // Вывод линии
+
         System.out.print("+");
         printDashes(68);
         System.out.println("+");
 
-        // Вывод заголовков таблицы
+
         System.out.printf("|  %6s  |  %6s  |  %6s  |  %12s  |  %14s  |\n",
                 "WINS", "LOSSES", "TIES", "GAMES PLAYED", "PERCENTAGE WON");
 
@@ -138,11 +136,9 @@ public class TheFoundation {
         printDashes(18);
         System.out.println("|");
 
-        // Вывод значений
         System.out.printf("|  %6d  |  %6d  |  %6d  |  %12d  |  %13.2f%%  |\n",
                 wins, losses, ties, numberOfGames, percentageWon * 100);
 
-        // Вывод линии
         System.out.print("+");
         printDashes(68);
         System.out.println("+");
