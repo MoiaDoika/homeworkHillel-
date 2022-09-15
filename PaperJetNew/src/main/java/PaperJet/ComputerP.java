@@ -2,7 +2,7 @@ package PaperJet;
 
 import java.util.Random;
 
-public class Computer {
+public class ComputerP {
     public RockPaperScissors getMove() {
         RockPaperScissors[] moves = RockPaperScissors.values();
         Random random = new Random();

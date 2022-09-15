@@ -1,9 +1,9 @@
 package PaperJet;
 
-public enum Bot {
+public enum BotP {
     ROCK, PAPER, SCISSORS;
 
-    public int compareMoves(Bot otherMove) {
+    public int compareMoves(BotP otherMove) {
         // Ничья
         if (this == otherMove)
             return 0;

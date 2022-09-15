@@ -1,10 +1,9 @@
-package PaperJet;
-
+/*import PaperJet.RockPaperScissors;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class BotTest {
+class BotTestP {
 
     @Test
     void compareMoves() {
@@ -12,4 +11,4 @@ class BotTest {
         assertEquals(1,  RockPaperScissors.PAPER.compareMoves(RockPaperScissors.ROCK));
         assertEquals(-1,  RockPaperScissors.PAPER.compareMoves(RockPaperScissors.SCISSORS));
     }
-}
+}*/

@@ -1,16 +1,22 @@
 package PaperJet;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ResourceBundle;
 import java.util.Scanner;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-public class TheFoundation {
 
-    private User user;
-    private Computer computer;
+
+public class TheFoundationP {
+
+    private UserP user;
+    private ComputerP computer;
     private int userScore;
     private int win;
     private int lost;
@@ -18,11 +24,15 @@ public class TheFoundation {
     private int numberOfGames;
     private String name;
     private static List<String> info = new ArrayList<>();
+    static ResourceBundle resourceBundle = ResourceBundle.getBundle("communicationWithPlayer", RunP.locale);
+
+    private static final Logger loggerDebug = LoggerFactory.getLogger("logger.debug");
+    private static final Logger loggerResult = LoggerFactory.getLogger("logger.result");
 
 
-    public TheFoundation() {
-        user = new User();
-        computer = new Computer();
+    public TheFoundationP() {
+        user = new UserP();
+        computer = new ComputerP();
         userScore = 0;
         computerScore = 0;
         numberOfGames = 0;
@@ -44,19 +54,19 @@ public class TheFoundation {
         this.win = win;
     }
 
-    public User getUser() {
+    public UserP getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(UserP user) {
         this.user = user;
     }
 
-    public Computer getComputer() {
+    public ComputerP getComputer() {
         return computer;
     }
 
-    public void setComputer(Computer computer) {
+    public void setComputer(ComputerP computer) {
         this.computer = computer;
     }
 
@@ -98,9 +108,14 @@ public class TheFoundation {
 
     public void startGame() {
         System.out.println("ROCK, PAPER, SCISSORS!");
+        loggerResult.debug("===============================================");
+        loggerResult.debug("Start game");
+        loggerResult.debug("Game statistic for gamer : " + name);
 
         RockPaperScissors userMove = user.getMove();
         RockPaperScissors computerMove = computer.getMove();
+        System.out.println(resourceBundle.getString("choose") + " " + resourceBundle.getString(userMove.toString())); //choose
+        System.out.println(resourceBundle.getString("computer") + " " + resourceBundle.getString(computerMove.toString())); //computer
         System.out.println("\nVASH HODE " + userMove + ".");
         System.out.println("Hod computer " + computerMove + ".\n");
 
@@ -110,17 +125,23 @@ public class TheFoundation {
             case 0:
                 info.add("USER MOVE : " + userMove + " " + "COMPUTER MOVE : " + computerMove + " -> TIES" + "\n");
                 System.out.println("Tie!");
+                loggerResult.debug("User move : " + userMove);
+                loggerResult.debug("Computer move : " + computerMove);
                 break;
             case 1:
                 info.add(userMove + " beats " + computerMove + " win -> " + name + "\n");
                 System.out.println(userMove + " beats " + computerMove + " win -> " + name);
                 System.out.println(userMove + " beats " + computerMove + ". You win!");
+                loggerResult.debug("User move : " + userMove);
+                loggerResult.debug("Computer move : " + computerMove);
                 userScore++;
                 break;
             case -1:
                 info.add(computerMove + " beats " + userMove + "  loss -> " + name + "\n");
                 System.out.println(computerMove + " beats " + userMove + "  loss -> " + name);
                 System.out.println(computerMove + " beats " + userMove + ". Wasted.");
+                loggerResult.debug("User move : " + userMove);
+                loggerResult.debug("Computer move : " + computerMove);
                 computerScore++;
                 break;
         }
@@ -141,7 +162,10 @@ public class TheFoundation {
         int ties = numberOfGames - userScore - computerScore;
         double percentageWon = (wins + ((double) ties) / 2) / numberOfGames;
         info.add("NAMES : " + name + "\n" + "WINS : " + wins + "\n" + "LOSSES : " + losses + "\n" + "TIES : " + ties + "\n" + "GAMES PLAYED : " + numberOfGames + "\n" + "PERCENTAGE WON : " + percentageWon * 100 + "\n" + "\n" + "\n" + "\n");
-
+        loggerResult.debug("Wins : " + wins);
+        loggerResult.debug("Losses : " + losses);
+        loggerResult.debug("Ties : " + ties);
+        loggerResult.debug("Percent wins : " + percentageWon * 100);
 
         System.out.print("+");
         printDashes(68);
